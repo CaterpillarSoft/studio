@@ -1,6 +1,6 @@
 # @caterpillarsoft/studio
 
-@caterpillarsoft/studio is a purpose-built platform that empowers robotics teams to visually debug robots, build reliable autonomy, and scale their development.
+@caterpillarsoft/studio 是一个专用平台，使机器人团队能够直观地调试机器人、建立可靠的自主性并扩展其发展。
 
 ## 平台设计思路
 
@@ -27,16 +27,19 @@
 平台插件系统提供以下核心能力：
 
 1. **数据处理能力**
+
    - 自定义数据源和解析器
    - 数据转换和过滤功能
    - 数据可视化和分析
 
 2. **界面扩展能力**
+
    - 自定义视图和面板
    - 命令和菜单扩展
    - 自定义工具栏和状态栏
 
 3. **时间控制能力**
+
    - 自定义时间线和事件标记
    - 播放控制和同步机制
    - 时间点定位和跳转
@@ -95,7 +98,7 @@
 export function activate(context) {
   // 注册命令
   context.subscriptions.push(
-    commands.registerCommand('myPlugin.analyze', () => {
+    commands.registerCommand("myPlugin.analyze", () => {
       // 实现命令逻辑
     })
   );
@@ -103,12 +106,12 @@ export function activate(context) {
   // 注册视图
   const dataTreeProvider = new DataTreeProvider();
   context.subscriptions.push(
-    window.registerTreeDataProvider('myPlugin.dataView', dataTreeProvider)
+    window.registerTreeDataProvider("myPlugin.dataView", dataTreeProvider)
   );
 
   // 订阅事件
   context.subscriptions.push(
-    events.onDataLoaded(data => {
+    events.onDataLoaded((data) => {
       // 处理数据加载事件
     })
   );
@@ -120,11 +123,13 @@ export function activate(context) {
 平台设计支持标注功能的无缝集成：
 
 1. **标注工作流**
+
    - 通过插件自定义标注工作流程
    - 提供标注任务分配和管理
    - 支持多人协作标注
 
 2. **标注工具**
+
    - 通过插件注册自定义标注工具
    - 扩展标注界面和交互方式
    - 提供标注辅助功能
